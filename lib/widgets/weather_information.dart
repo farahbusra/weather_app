@@ -12,7 +12,7 @@ class WeatherInformation extends StatelessWidget {
 
     return Container(
       width: 350,
-      height: 430,
+      height: 400,
       child: Card(
         shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(25.0),),
@@ -23,9 +23,9 @@ class WeatherInformation extends StatelessWidget {
           const SizedBox(height: 40,),
           Text('${weatherModel.name}', style:
           TextStyle(fontSize: 40, fontWeight: FontWeight.bold, fontFamily: 'Roboto mono'),),
-          const SizedBox(height: 30,),
+          SizedBox(height: 30,),
           Image.network('http://openweathermap.org/img/w/${weatherModel.weather.first.icon}.png',
-          width: 100, height: 100,),
+          width: 130, height: 130, fit: BoxFit.cover),
           // color: Colors.yellow,
           // size: 100),
         const SizedBox(height: 10,),
